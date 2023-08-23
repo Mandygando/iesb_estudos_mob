@@ -3,7 +3,6 @@ import { Text, StyleSheet } from "react-native";
 
 export default function MinMax(props) {
   const { min, max } = props;
-
   const maxValue = Math.max(min, max);
 
   return (
