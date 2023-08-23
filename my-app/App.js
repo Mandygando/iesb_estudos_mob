@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import MeuComponete from './components/MeuComponete';
 import MinMax from './components/MinMax';
+import MinMaxCal from './components/MinMaxCal';
 
 export default function App() {
   return (
@@ -9,11 +10,13 @@ export default function App() {
       <Text style={styles.texto}>A Gata Mágica</Text>
        
       <MinMax min="10" max="20"/>
+      
      
       <Image
         source={require('./assets/Yuumi_0.jpg')}
         style={ styles.img }
       />
+    <MinMaxCal/>
     </View>
   );
 }
@@ -28,6 +31,7 @@ const styles = StyleSheet.create({
   texto: {
     fontSize: 20,
     color: '#fff',
+    marginTop: 90,
   },
   img: {
     height: 300,
