@@ -2,23 +2,25 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import MinMax from './components/Semana01/MinMax';
 import MinMaxCal from './components/Semana01/MinMaxCal';
-import NumeroAleatorio from './components/Semana02/NumeroAleatorio';
+import NumeroAleatorio from './components/Semana03/NumeroAleatorio';
+import NumeroAleatorio2 from './components/Semana03/NumeroAleatorio2';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>A Gata Mágica</Text>
 
-      <MinMax min="10" max="20" />
+      {/* <MinMax min="10" max="20" /> */}
 
 
       <Image
         source={require('./assets/Yuumi_0.jpg')}
         style={styles.img}
       />
-      <MinMaxCal />
+      {/* <MinMaxCal /> */}
 
-      <NumeroAleatorio min="0" max="100" />
+      <NumeroAleatorio/>
+      <NumeroAleatorio2  min={1} max={10} />
     </View>
   );
 }

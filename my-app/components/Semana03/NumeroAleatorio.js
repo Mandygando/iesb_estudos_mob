@@ -13,7 +13,9 @@ export default function NumeroAleatorio() {
 
     return (
         <View style={styles.container}>
-            <Button title="Gerar Número Aleatório" onPress={gerarNumeroAleatorio} />
+            <Button title="Gerar Número Aleatório"
+                onPress={gerarNumeroAleatorio}
+                color='pink' />
             {numeroAleatorio !== null && (
                 <Text style={styles.numero}>
                     Número aleatório entre {min} e {max}: {numeroAleatorio}
@@ -31,5 +33,6 @@ const styles = StyleSheet.create({
     numero: {
         fontSize: 18,
         marginTop: 10,
+        color: 'white',
     },
 });
