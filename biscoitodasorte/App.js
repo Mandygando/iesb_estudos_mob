@@ -4,7 +4,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet} from "react-native";
 const App = () => {
   const frases = [
   "''A vida é como um labirinto sem saída, você sempre encontrará um beco sem saída.''",
-    "Não importa o quanto você tente, o fracasso sempre será a única constante.''",
+    "''Não importa o quanto você tente, o fracasso sempre será a única constante.''",
     "''A única certeza na vida é que tudo está destinado a dar errado.''",
     "''Sonhar grande? Mais como sonhar para se decepcionar ainda mais.''",
     "''Não há luz no fim do túnel, apenas mais escuridão.''",
@@ -17,7 +17,7 @@ const App = () => {
     "''A mediocridade é o único objetivo alcançável.''",
     "''A ambição só leva à decepção.''",
     "''Pensar positivo só atrai mais negatividade.''",
-    "''N''ada é digno de celebração, então por que se importar?''",
+    "''Nada é digno de celebração, então por que se importar?''",
     "''Cada novo dia é apenas mais um dia de desgraça.''",
     "''Você nasceu para pagar contas e morrer.''",
     "''A vida é um ciclo interminável de desapontamento.''",
