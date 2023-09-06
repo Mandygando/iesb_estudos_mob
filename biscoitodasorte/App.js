@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet} from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 const App = () => {
   const frases = [
-  "''A vida é como um labirinto sem saída, você sempre encontrará um beco sem saída.''",
+    "''A vida é como um labirinto sem saída, você sempre encontrará um beco sem saída.''",
     "''Não importa o quanto você tente, o fracasso sempre será a única constante.''",
     "''A única certeza na vida é que tudo está destinado a dar errado.''",
     "''Sonhar grande? Mais como sonhar para se decepcionar ainda mais.''",
@@ -24,7 +24,7 @@ const App = () => {
     "''O universo está conspirando contra você.''",
     "''Apenas abandone, porque você nunca vai conseguir.''",
     "''Por que fazer hoje o que você pode fazer amanhã ''",
-];
+  ];
 
   const [frase, setFrase] = useState("");
   const [quebrado, setQuebrado] = useState(false);
@@ -44,32 +44,34 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.img}
-        source={quebrado ? require("./assets/biscoito-aberto.png") : require("./assets/biscoito-fechado.png")}
-      />
-      {frase ? (
-        <Text style={styles.textofrases}>{frase}</Text>
-      ) : null}
-      <TouchableOpacity
-        onPress={quebrarBiscoito}
-        style={[styles.botao, { backgroundColor: quebrado ? "gray" : "#f17ea1" }]}
-        disabled={quebrado}
-      >
-        <Text style={{ color: "white" }}>
-          {quebrado ? "Biscoito quebrado!" : "Quebrar o Biscoito"}
-        </Text>
-      </TouchableOpacity>
+      <View style={styles.borda}>
+        <Image
+          style={styles.img}
+          source={quebrado ? require("./assets/biscoito-aberto.png") : require("./assets/biscoito-fechado.png")}
+        />
+        {frase ? (
+          <Text style={styles.textofrases}>{frase}</Text>
+        ) : null}
+        <TouchableOpacity
+          onPress={quebrarBiscoito}
+          style={[styles.botao, { backgroundColor: quebrado ? "gray" : "#f17ea1" }]}
+          disabled={quebrado}
+        >
+          <Text style={{ color: "white" }}>
+            {quebrado ? "Biscoito quebrado!" : "Quebrar o Biscoito"}
+          </Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={reiniciarBiscoito}
-        style={[styles.botao, { backgroundColor: quebrado ? "#f17ea1" : "gray" }]}
-        disabled={!quebrado}
-      >
-        <Text style={{ color: "white" }}>
-          {quebrado ? "Reiniciar o Biscoito" : "Biscoito não quebrado"}
-        </Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={reiniciarBiscoito}
+          style={[styles.botao, { backgroundColor: quebrado ? "#f17ea1" : "gray" }]}
+          disabled={!quebrado}
+        >
+          <Text style={{ color: "white" }}>
+            {quebrado ? "Reiniciar o Biscoito" : "Biscoito não quebrado"}
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -77,9 +79,17 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "pink",
+    backgroundColor: "#b81466",
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  borda: {
+    borderWidth: 5, 
+    borderColor: "black", 
+    borderRadius: 50, 
+    padding: 15,
+    backgroundColor: "pink", 
   },
 
   textofrases: {
@@ -90,14 +100,14 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    marginTop: 100,
+    marginTop: 10,
+    alignSelf:"center"
   },
 
   botao: {
-    marginTop: 50,
+    marginTop: 20,
     padding: 10,
     borderRadius: 20,
-    width: 200, 
     alignItems: "center",
   },
 });
