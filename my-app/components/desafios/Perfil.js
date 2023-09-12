@@ -1,43 +1,73 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
-const Perfil = ({ nome, idade, cidade, descricao, imagemPerfil }) => {
+export default function Perfil() {
     return (
         <View style={styles.container}>
-            <Image source={imagemPerfil} style={styles.imagemPerfil} />
-            <Text style={styles.nome}>{nome}</Text>
-            <Text style={styles.info}>
-                {idade} anos - {cidade}
-            </Text>
-            <Text style={styles.descricao}>{descricao}</Text>
+            <Image
+                style={styles.imagem}
+                source={require('../../assets/img_perfil.jpg')}
+            />
+            <View>
+                <Text style={styles.texto}>Este é o perfil de Amanda!</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+                <Text style={[styles.textoLabel]}>Gênero:</Text>
+                <Text style={styles.texto}>Feminino</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+                <Text style={[styles.textoLabel]}>Nome:</Text>
+                <Text style={styles.texto}>Amanda Vitoria</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+                <Text style={[styles.textoLabel]}>Telefone:</Text>
+                <Text style={styles.texto}>(61) 98299-9271</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+                <Text style={[styles.textoLabel]}>E-mail:</Text>
+                <Text style={styles.texto}>amanda.v.ferreira@email.com</Text>
+            </View>
         </View>
     );
-};
+}
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: "center",
-        marginVertical: 20,
+        flex: 1,
+        backgroundColor: 'pink', 
+        alignItems:'center',
+        width: '100%', // Ocupar toda a largura da tela
+        padding: 20, // Adicionando espaço interno
+        
     },
-    imagemPerfil: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 10,
+
+    labelContainer: {
+        alignItems: 'center',
+        width: '100%',
+        padding: 20,
     },
-    nome: {
-        fontSize: 24,
-        fontWeight: "bold",
+
+    texto: {
+        fontSize: 15,
+        color: 'white',
     },
-    info: {
-        fontSize: 18,
-        color: "gray",
+
+    textoLabel: {
+        fontWeight: 'bold',
+        textAlign: 'left',
     },
-    descricao: {
-        fontSize: 16,
-        marginHorizontal: 20,
-        textAlign: "center",
+
+    imagem: {
+        width: 250,
+        height: 250,
+        borderWidth: 2,
+        borderColor: 'white',
+        borderRadius: 500,
+        padding: 20,
+        marginTop: 20,
     },
 });
-
-export default Perfil;

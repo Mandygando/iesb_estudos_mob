@@ -7,19 +7,18 @@ import NumeroAleatorio2 from './components/Semana03/NumeroAleatorio2';
 import DigiteSeuNome from './components/Semana03/DigiteSeuNome';
 import Contador from './components/Semana03/Contador';
 import Perfil from './components/desafios/Perfil';
+import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>A Gata Mágica</Text>
+      
+      {/* <Text style={styles.texto}>A Gata Mágica</Text> */}
 
 
 
 
-      {/* <Image */}
-        source={require('./assets/Yuumi_0.jpg')}
-        style={styles.img}
-      {/* /> */}
+      
       {/* <MinMax min="10" max="20" /> */}
       {/* <MinMaxCal /> */}
       {/* <NumeroAleatorio/> */}
@@ -27,13 +26,7 @@ export default function App() {
       {/* <DigiteSeuNome/> */}
       {/* <Contador/> */}
 
-      <Perfil
-        nome="João Silva"
-        idade={28}
-        cidade="São Paulo, SP"
-        descricao="Olá, sou um entusiasta de tecnologia apaixonado por desenvolvimento de aplicativos móveis. Sempre em busca de aprender coisas novas e criar experiências incríveis para os usuários."
-        imagemPerfil={require("./assets/img_perfil.jpg")}
-      />
+      <Perfil/>
     </View>
   );
 }
