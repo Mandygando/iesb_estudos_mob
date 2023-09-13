@@ -8,6 +8,7 @@ import DigiteSeuNome from './components/Semana03/DigiteSeuNome';
 import Contador from './components/Semana03/Contador';
 import Perfil from './components/desafios/Perfil';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
+import Cronometro from './components/desafios/Cronometro';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       {/* <Contador/> */}
 
       {/* <Perfil/> */}
+      <Cronometro></Cronometro>
     </View>
   );
 }
