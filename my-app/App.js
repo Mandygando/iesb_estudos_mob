@@ -26,7 +26,7 @@ export default function App() {
       {/* <DigiteSeuNome/> */}
       {/* <Contador/> */}
 
-      <Perfil/>
+      {/* <Perfil/> */}
     </View>
   );
 }
