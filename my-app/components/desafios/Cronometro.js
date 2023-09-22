@@ -54,7 +54,6 @@ export default function Cronometro() {
         const tempoAtual = display;
         setUltimoTempo(tempoAtual);
 
-        // Adicione o tempo atual aos tempos salvos
         setTemposSalvos([...temposSalvos, tempoAtual]);
 
         setDisplay('00:00:00');
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 10,
         position: 'relative',
-        marginTop: -150, // Mova o texto para cima ajustando esse valor
+        marginTop: -150, 
     },
     displayText: {
         fontSize: 30,
