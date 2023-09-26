@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
-import { Card, List } from 'react-native-paper';
+import { Avatar, Card, List } from 'react-native-paper';
 import Api from '../../services/Api';
 
 export default function Home({ navigation }) {
@@ -29,7 +29,11 @@ export default function Home({ navigation }) {
           >
             <Card style={styles.card}>
               <Card.Content>
-              <List.Icon icon="account-circle" />
+              <Avatar.Image 
+                  size={70} 
+                  source={{ uri: item.image }} 
+                  style={styles.avatar} 
+                />
                 <Text>{`${item.firstName} ${item.lastName}`}</Text>
               </Card.Content>
             </Card>
